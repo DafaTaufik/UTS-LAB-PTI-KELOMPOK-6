@@ -1,6 +1,6 @@
 
 Anggota Kelompok 6 :
-- Gilbert Tiovan - 00000066881
+- Gilbert Tiovan - 00000066811
 - Christopher Andrew Radhardjo - 00000066460
 - Dafa Taufik Al Latief - 00000067476
 - Daffa Muflih Purnama - 00000067437
@@ -20,4 +20,4 @@ Fitur Musik : Player dapat meng-aktifkan ataupun menon-aktifkan backsound dari g
 
 Fitur About Us : Pada fitur ini, adalah fitu mengenai para tim dibalik game tahu bulat ini, selain itu dibagian bawah terdapat link yang menjadi sumber dan referensi dari para team saat membuat game tahu bulat ini.
 
-Link Git :
+Link Git :https://github.com/DafaTaufik/UTS-LAB-PTI-KELOMPOK-6.git
