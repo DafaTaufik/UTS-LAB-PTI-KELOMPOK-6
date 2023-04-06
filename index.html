@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="description" content="">
+		<title>Tahu Bulat</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css" />
+	</head>
+<body>
+    <div class = "container">
+      <nav class="nav">
+        <a href="#" onclick="page1()">Main Game</a>
+        <a href="#" onclick="aboutus()">About Us</a>
+        <div class="animation start-move"></div>
+      </nav>
+
+      <div id ="page1">
+        <div class ="top">
+          <h1>Idle Clicker Game (Tahu Bulat)</h1>
+        </div>
+        <div class ="info">
+          <div class ="info1">
+            <span id="total">Money : 0</span>
+            <p id ="mpc"> Money per click : 1</p>
+            <button id="playButton" style="height: 67px;">PLAY MUSIC</button>
+            <audio id="audio" src="music.mp3" autoplay loop></audio>
+          </div>
+          <div class ="info1">
+            <p id ="counterAC">Auto-clciker: 0</p>
+            <p id = "price"> Cost: 10</p>
+            <button id ="beliAC" onclick="">BUY AUTO CLICKER</button>
+          </div>
+          <div class ="info1">
+            <p id ="counterC">Buka Cabang Tahu Bulat : 1</p>
+            <p id = "cost">Cost : 50</p>
+            <button id ="beliM" onclick="">BUY MULTIPLIER</button>
+          </div>
+        </div>
+
+        <div class ="infobawah">
+          <div class="bawahkata">
+            <h2>UPGRADES DAGANGAN</h2>
+            <button id ="jualTI" onclick="">JUAL TAHU ISI</button>
+            <p id ="jualTIp"> Cost :10000 (add 50 money per click)</p>
+            <button id ="jualR" onclick="">JUAL RISOL</button>
+            <p id ="jualRp"> Cost :20000 (add 75 money per click)</p>
+            <button id ="jualC" onclick="">JUAL CAKWE</button>
+            <p id ="jualCp"> Cost :30000 (add 100 money per click)</p>
+          </div>
+          <div>
+            <h2>CLICK TAHU</h2>
+              <img src="idle.gif"  onclick="add()" id="gambar" >
+          </div>
+        </div>
+      </div>
+      <div id ="page2">
+        <h1 class="abt">ABOUT US</h1>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card">
+                <img src="gilbertn.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h3 class="card-title">Gilbert Tiovan</h3>
+                  <p class="card-text">NIM : 00000066811 <hr> Gilbert seorang anak asal medan yang 
+                  berani merantau demi menempuh pendidikan yang dicita-citakannya.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="citopn.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h3 class="card-title">Christopher Andrew Radhardjo</h3>
+                  <p class="card-text">NIM : 00000066460 <hr> Pesan : FIXGOLL</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="yorinn.jpg" class="card-img-top citop" alt="...">
+                  <div class="card-body">
+                  <h3 class="card-title">Yohanes Riangto</h3>
+                  <p class="card-text">NIM : 00000065501 <hr> Pesan : Kuliah itu menyenangkan kalau punya pacar</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row row-cols-1 row-cols-md-3 justify-content-between g-20 ">
+          <div class="col">
+            <div class="card">
+              <img src="damun.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h3 class="card-title">Daffa Muflih Purnama</h3>
+                <p class="card-text">NIM : 00000067437 <hr> Pesan : Kita emang teman, tapi kalo urusan Polisi kita masing-masing.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+              <div class="card">
+                <img src="p.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h3 class="card-title">Dafa Taufik Al Latief</h3>
+                  <p class="card-text">NIM : 00000067476 <hr> Pesan : Belajar memang asik, tapi tidak belajar lebih asik</p>
+                </div>
+              </div>
+            </div>
+          </div>
+<div class="rfc">
+  <hr>
+  <h3>Reference :</h3>
+  <p>Bootstrap : https://getbootsrap.com/</p>
+  <p>Music : https://pixabay.com/music/search/calm%20background%20music/</p>
+  <p>Picture : https://www.pinterest.com/pin/620722761124469832/</p>
+</div>
+    </div>
+  
+</div>
+</body>
+<script>
+    document.getElementById("page2").style.display="none";  
+    var money=0;
+    var img = document.getElementById("gambar");
+    function add(){
+       
+    
+        
+        
+        money = money + moneyperclick;
+        document.getElementById("total").innerHTML="Money:"+money;
+       
+        
+    }
+    // setInterval(function(){
+    //     a=a+b;
+    //     document.getElementById("total").innerHTML="Money:"+a;
+    // }, 1000)
+    const button = document.getElementById("beliAC");
+    
+    var a=0;
+var counter =0;
+var price = 10;
+var moneyperclick=1;
+var counterC =1;
+var cost = 50;
+button.addEventListener("click", () => {
+    
+    if (money >= price){
+  counter++;
+
+ money= money-price; 
+ price = Math.floor(price *1.5) ;
+    
+  function loop() {
+    document.getElementById("total").innerHTML="Money:"+ money;
+    document.getElementById("counterAC").innerHTML="Auto-clicker:"+counter;
+    document.getElementById("mpc").innerHTML="Money per Click :"+moneyperclick;
+    document.getElementById("price").innerHTML="Cost:"+price;
+    
+    money =money+moneyperclick;
+    
+    if (a < 2) {
+      setTimeout(loop, 1000); // execute loop again after 1 second
+    }
+  }
+    }
+    else{
+
+window.alert("UANG KAMU TIDAK CUKUP UNTUK MEMBELI AUTO CLICKER");
+}
+  loop(); // start the loop
+});
+ 
+const buttonM = document.getElementById("beliM");
+
+buttonM.addEventListener("click" , () => {
+    if (money >= cost){
+        
+        money = money -cost
+        document.getElementById("total").innerHTML="Money:"+ money;
+    counterC++;
+    moneyperclick++;
+    cost = cost *2;
+    document.getElementById("counterC").innerHTML="Buka Cabang Tahu Bulat :"+counterC;
+    document.getElementById("cost").innerHTML="Cost :"+cost;
+    document.getElementById("mpc").innerHTML="Money per Click :"+moneyperclick;
+    img.src ="upgradetahu.gif";
+    setTimeout(function() {
+img.src = "tahu.gif";
+}, 3000);
+    }
+    else{
+
+      window.alert("UANG KAMU TIDAK CUKUP UNTUK MEMBELI CABANG BARU");
+    }
+
+
+
+
+});
+
+const gif = document.getElementById("gambar");
+gif.onload = function() {
+  setInterval(function() {
+    gif.src = gif.src;
+  }, 3000);
+};
+gif.src = 'tahu.gif';
+
+const button1 = document.getElementById("jualTI");
+const button2 = document.getElementById("jualR");
+const button3 = document.getElementById("jualC");
+
+
+button1.addEventListener("click" , () =>{
+if (money >= 10000){
+money -=10000;
+moneyperclick +=50;
+document.getElementById("total").innerHTML="Money:"+ money;
+document.getElementById("mpc").innerHTML="Money per Click :"+moneyperclick;
+document.getElementById("jualTI").style.display="none"; 
+document.getElementById("jualTIp").style.display="none"; 
+}
+else{
+
+window.alert("UANG KAMU TIDAK CUKUP UNTUK MENJUAL TAHU ISI");
+}
+});
+button2.addEventListener("click" , () =>{
+
+    if (money >= 20000){
+money -=20000;
+moneyperclick +=75;
+document.getElementById("total").innerHTML="Money:"+ money;
+document.getElementById("mpc").innerHTML="Money per Click :"+moneyperclick;
+document.getElementById("jualRp").style.display="none"; 
+}
+else{
+
+window.alert("UANG KAMU TIDAK CUKUP UNTUK MENJUAL RISOL");
+}
+
+
+});
+button3.addEventListener("click" , () =>{
+
+    if (money >= 30000){
+money -=30000;
+moneyperclick +=100;
+document.getElementById("total").innerHTML="Money:"+ money;
+document.getElementById("mpc").innerHTML="Money per Click :"+moneyperclick;
+document.getElementById("jualCp").style.display="none"; 
+}
+else{
+
+window.alert("UANG KAMU TIDAK CUKUP UNTUK JUAL CAKWE");
+}
+
+
+});
+function aboutus(){
+    document.getElementById("page1").style.display="none";  
+    document.getElementById("page2").style.display="";  
+
+}
+     
+function page1(){
+    document.getElementById("page2").style.display="none";  
+    document.getElementById("page1").style.display="";  
+}
+var playButton = document.getElementById("playButton");
+  var isLooping = true;
+  var counter =0;     
+  playButton.addEventListener("click", function() {
+  counter++;
+  if(counter % 2 == 1){
+    audio.play();
+    playButton.innerHTML = "MUTE MUSIC";
+    
+  }
+  else{
+    audio.pause();
+    playButton.innerHTML = "PLAY MUSIC";
+  }
+   
+  });
+
+</script>
+<style>
+  
+</style>
+</html>
